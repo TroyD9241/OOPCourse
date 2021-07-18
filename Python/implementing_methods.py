@@ -84,3 +84,50 @@ Steve.demo(1, 2, 3, 4, 5)
 # c = 3
 # d = 4
 # e = 5
+
+
+class MyClass:
+    classVariable = 'educative'
+    #basic layout for classmethod implementation
+    @classmethod
+    def demo(cls):
+        return cls.classVariable
+
+class Player:
+    teamName = 'Bayern' # class  variable
+
+    def __init__(self, name):
+        self.name = name # creating instance variables
+
+    @classmethod
+    # classmethod decorator defines getTeamName as a class method
+    def getTeamName(cls):
+        return cls.teamName
+
+    @staticmethod
+    #! static methods do not know anything about the state of the class
+    #defining demo as a static method using the decorator
+    def demo():
+        print('I am static')
+
+
+print(Player.getTeamname()) # here we call the method using  its class name
+#bayern
+p1 = Player('lol')
+p1.demo()
+Player.demo()
+# I am a static method.
+# I am a static method.
+
+#? another example of static methods
+
+class BodyInfo:
+    #? static methods are used to produce something from parameters
+    @staticmethod
+    def bmi(weight, height):
+        return weight/(height**2)
+
+weight = 75
+height = 1.7
+print(BodyInfo.bmi(weight, height))
+# 23.148148148148145
