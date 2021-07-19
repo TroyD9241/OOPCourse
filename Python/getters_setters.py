@@ -21,3 +21,5 @@ Steve = User('steve1')
 print('Before setting:', Steve.getUsername())
 Steve.setUsername('steve2')
 print('After setting:', Steve.getUsername())
+# Before setting: steve1
+# After setting: steve2

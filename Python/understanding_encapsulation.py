@@ -43,6 +43,18 @@ class User:
 
     def login(self, username, password):
         if self.__username.lower() == username.lower() and self.__password == password:
-            print('access granted for ', self.__username.lower(), 'with password ', self.__password
+            print('access granted for ', self.__username.lower(), 'with password ', self.__password)
         else:
             print('invalid')
+
+# created a new User object and stored the password and username
+Steve = User("Steve", "12345")
+Steve.login("steve", "12345")  # Grants access because credentials are valid
+
+# does not grant access since the credentails are invalid
+Steve.login("steve", "6789")
+Steve.__password  # compilation error will occur due to this line
+# Traceback (most recent call last):
+#   File "main.py", line 24, in <module>
+#     Steve.__password  # compilation error will occur due to this line
+# AttributeError: 'User' object has no attribute '__password'
