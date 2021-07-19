@@ -10,8 +10,10 @@
 # setRollNumber()
 # Implement this class according to the rules of encapsulation.
 
+#! setvalue using getter and setters
 # class Student():
 #     def __init__(self, name=None, rollNumber=None):
+        #? this is redundant
 #         self.__name = name
 #         self.__rollNumber = rollNumber
 
@@ -24,7 +26,8 @@
 #         return self.__rollNumber
 #     def setRollNumber(self, newRollNumber):
 #         self.__rollNumber = newRollNumber
-
+#! Do not do this!
+#? do this :)
 class Student:
     def setName(self, name):
         self.__name = name
