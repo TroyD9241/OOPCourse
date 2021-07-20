@@ -11,11 +11,14 @@
 
 class Rectangle:
     def __init__(self, length=None, width=None):
+        # defined our initializer
         self.__length = length
-        self.__width = width
 
+        self.__width = width
+        # declared our variables as PRIVATE so they can NOT be modified directly
     def area(self):
         area = self.__length * self.__width
+        # this public method modifies values
         return area
 
     def perimeter(self):
