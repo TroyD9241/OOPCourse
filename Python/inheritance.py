@@ -7,6 +7,7 @@ class ChildClass(ParentClass):
     # attributes of the child class
     pass
 
+#parent class
 class Vehicle:
     def __init__(self, make, color, model):
         self.make = make
@@ -18,10 +19,14 @@ class Vehicle:
         print("Color:", self.color)
         print("Model:", self.model)
 
+# child class
 class Car(Vehicle):
+    # inherits props from vehicle
     def __init__(self, make, color, model, doors):
         # calling the contructor from the parent class
+        # without the super keyword
         Vehicle.__init__(self, make, color, model)
+
         self.doors = doors
 
     def printCarDetails(self):
@@ -30,3 +35,8 @@ class Car(Vehicle):
 
 obj1 = Car("Suzuki", "Grey", "2015", 4)
 obj1.printCarDetails()
+
+# Manufacturer: Suzuki
+# Color: Grey
+# Model: 2015
+# Doors: 4
