@@ -36,3 +36,23 @@ print("Area of circle is:", str(shapes[1].getArea()))
 # Area of rectangle is: 60
 # Sides of a circle are 0
 # Area of circle is: 153.958
+
+#! good example of polymorphism using inheritance
+
+class Shape:
+    def __init__(self):
+        self.sides = 0
+
+    def getArea(self):
+        pass
+
+class Rectangle(Shape):
+    #initializer
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+        self.sides = 4
+
+    #method to calculate area
+    def getArea(self):
+        return self.width * self.height
