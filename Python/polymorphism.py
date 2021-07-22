@@ -56,3 +56,11 @@ class Rectangle(Shape):
     #method to calculate area
     def getArea(self):
         return self.width * self.height
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+        self.sides = 0
+
+    def getArea(self):
+        return self.radius * self.radius * 3.142

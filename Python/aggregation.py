@@ -31,6 +31,7 @@ p.printDetails()
 #deletes the object P
 del p
 print("")
+#! however the c object continues its lifecycle
 c.printDetails()
 
 # Country Name: Wales

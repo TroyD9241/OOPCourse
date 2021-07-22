@@ -51,6 +51,8 @@ shape = Shape()
 class Shape(ABC): # shape is a child class of ABC
     @abstractmethod
     def area(self):
+        # Note: Methods with
+        # @abstractmethod decorators must be defined in the child class.
         pass
 
     @abstractmethod
@@ -66,3 +68,5 @@ class Square(Shape):
 
     def perimeter(self):
         return 4 * self.length
+
+shape = Shape()

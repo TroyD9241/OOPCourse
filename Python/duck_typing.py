@@ -35,6 +35,6 @@ sound.Sound(cat)
 # that bird is a duck.
 
 # In layman terms,
-# since both the animals, dog and cats,
+# since both the animals, dogs and cats,
 # can speak like animals, they both are animals.
 # This is how we have achieved polymorphism without inheritance.

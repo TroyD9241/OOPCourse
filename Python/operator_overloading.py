@@ -21,6 +21,7 @@ class Com:
         self.imag = imag
 
     def __add__(self, other): # overloading the '+' operator
+        # other is a reference to the other objects that are interacting with the class object
         temp = Com(self.real + other.real, self.imag + other.imag)
         return temp
 
@@ -30,9 +31,9 @@ class Com:
 
 obj1 = Com(3, 7)
 obj2 = Com(2, 5)
-
-obj3 = obj1 + obj2
-obj4 = obj1 - obj2
+#! the operator is called on obj1  obj2 is considered the other object
+obj3 = obj1 + obj2 #! returned object will be stored in obj3
+obj4 = obj1 - obj2 #! this line is the reverse of the above line
 
 print("real of obj3:", obj3.real)
 print("imag of obj3:", obj3.imag)
@@ -42,3 +43,13 @@ print("imag of obj4:", obj4.imag)
 # imag of obj3: 12
 # real of obj4: 1
 # imag of obj4: 2
+
+
+#? common overloaded operators
+# +, __add__(self, other)
+# -, __sub__(self, other)
+# /, __truediv__(self, other)''
+# *, __mul__(self, other)
+# <, __lt__(self, other)
+# >, __gt__(self, other)
+# ==, __eq__(self, other)
